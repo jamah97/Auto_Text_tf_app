@@ -23,7 +23,7 @@ def main():
 				st.dataframe(df.head(int(st.text_input("Select Number of Rows To View"))))
 			except ValueError:
 				pass
-		algorithm = ["nnlm-en-dim20", "nnlm-en-dim50", "nnlm-en-dim128", "Wiki-words-500-with-normalization"]
+		algorithm = ["nnlm-en-dim20", "nnlm-en-dim50", "nnlm-en-dim128", "Wiki-words-250-with-normalization/2"]
 		choice = st.selectbox("Select Algorithm",algorithm)
 		testsize = st.slider('Testing size: Select percent of data that will be used as testing data.', 0, 50)
 
@@ -140,7 +140,7 @@ def main():
 
 
 
-		if choice == "Wiki-words-500-with-normalization":
+		if choice == "Wiki-words-250-with-normalization/2":
 			iv = st.selectbox("Select predictor variable", df.columns.to_list())
 			dv = st.selectbox("Select independent variable", df.columns.to_list())
 			iv1 = df[iv]
@@ -161,7 +161,7 @@ def main():
 				train_y = utils.to_categorical(train_y, num_c)
 				test_y = utils.to_categorical(test_y, num_c)
 
-				hub_layer = hub.KerasLayer("https://tfhub.dev/google/Wiki-words-500-with-normalization/2", input_shape=[], dtype=tf.string)
+				hub_layer = hub.KerasLayer("https://tfhub.dev/google/Wiki-words-250-with-normalization/2", input_shape=[], dtype=tf.string)
 				model = tf.keras.models.Sequential([ hub_layer,
 													tf.keras.layers.Dense(128, activation='relu'),
 													tf.keras.layers.Dropout(.2),
