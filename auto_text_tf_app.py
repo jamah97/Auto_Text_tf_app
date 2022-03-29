@@ -13,6 +13,8 @@ st.write("About Section:")
 
 def main():
 # step 1 allow the end-user to upload dataset of choice
+	st.subheader("Auto Text App")
+	st.write("About Section:")
 	data = st.file_uploader("Upload Dataset",type=["csv"])
 	if data is not None:
 		df = pd.read_csv(data)
