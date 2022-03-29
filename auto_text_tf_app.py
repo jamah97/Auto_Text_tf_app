@@ -125,8 +125,8 @@ def main():
 				st.write("number of classes", num_c)
 				train_y = utils.to_categorical(train_y, num_c)
 				test_y = utils.to_categorical(test_y, num_c)
-				train_x = tf.convert_to_tensor(train_x)
-				test_x = tf.convert_to_tensor(test_x)
+				#train_x = tf.convert_to_tensor(train_x)
+				#test_x = tf.convert_to_tensor(test_x)
 				hub_layer = hub.KerasLayer("https://tfhub.dev/google/tf2-preview/nnlm-en-dim128-with-normalization/1", output_shape=[128], input_shape=[], dtype=tf.string)
 				model = tf.keras.models.Sequential([ hub_layer,
 													tf.keras.layers.Dense(128, activation='relu'),
