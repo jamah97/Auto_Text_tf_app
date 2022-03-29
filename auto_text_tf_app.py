@@ -36,7 +36,7 @@ def main():
 			dv2 = pd.DataFrame(data=dv1)
 			iv2 = pd.DataFrame(data=iv1)
 
-			loss_function = ["binary_crossentropy", "categorical_crossentropy", "sparse_categorical_crossentropy"]
+			loss_function = ["binary_crossentropy", "categorical_crossentropy"]
 			loss = st.selectbox("Select loss function",loss_function)
 
 			if st.button("Model Performance"):
@@ -74,7 +74,7 @@ def main():
 			dv2 = pd.DataFrame(data=dv1)
 			iv2 = pd.DataFrame(data=iv1)
 
-			loss_function = ["binary_crossentropy", "categorical_crossentropy", "sparse_categorical_crossentropy"]
+			loss_function = ["binary_crossentropy", "categorical_crossentropy"]
 			loss = st.selectbox("Select loss function",loss_function)
 
 			if st.button("Model Performance"):
@@ -109,7 +109,7 @@ def main():
 			dv2 = pd.DataFrame(data=dv1)
 			iv2 = pd.DataFrame(data=iv1)
 
-			loss_function = ["binary_crossentropy", "categorical_crossentropy", "sparse_categorical_crossentropy"]
+			loss_function = ["binary_crossentropy", "categorical_crossentropy"]
 			loss = st.selectbox("Select loss function",loss_function)
 
 			if st.button("Model Performance"):
