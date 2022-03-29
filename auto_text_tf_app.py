@@ -20,7 +20,7 @@ def main():
 				st.dataframe(df.head(int(st.text_input("Select Number of Rows To View"))))
 			except ValueError:
 				pass
-		algorithm = ["nnlm-en-dim128", "nnlm-en-dim50", "nnlm-en-dim20"]
+		algorithm = ["nnlm-en-dim20", "nnlm-en-dim50", "nnlm-en-dim128"]
 		choice = st.selectbox("Select Algorithm",algorithm)
 		testsize = st.slider('Testing size: Select percent of data that will be used as testing data.', 0, 50)
 
