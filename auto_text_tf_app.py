@@ -16,7 +16,7 @@ def main():
 # step 1 allow the end-user to upload dataset of choice
 	st.subheader("Auto Text Classifier App")
 	st.write("Applcation created by Hassan Jama")
-	st.write("About Section: In this application, you will be able to upload any CSV file that you may want to use to perform text classification. There will be a list of pre-train models that you will be able to select from. All of the models are provided through the TensorFlow hub. This is also known as transfer learning. 3 of the pre-train models are type Neural-Net Language Model (NNLM) with dimensions of 20, 50, and 128. The other pre-train model is wiki-words-250- with- normalization, which is token-based text embedding trained on Wikipedia corpus.")
+	st.write("About Section: In this application, you will be able to upload any CSV file that you may want to use to perform text classification. After uploading your CSV file, you'll have the opportunity to preview the data. Furthermore, there will also be a list of pre-train models that you will be able to select from. All of the models are provided through the TensorFlow hub. This is also known as transfer learning. 3 of the pre-train models are type Neural-Net Language Model (NNLM) with dimensions of 20, 50, and 128. The other pre-train model is wiki-words-250- with- normalization, which is token-based text embedding trained on Wikipedia corpus.")
 	st.write("For better performance, please provide a CSV file that is under 3MB and in the English language.")
 	data = st.file_uploader("Upload Dataset",type=["csv"], )
 	if data is not None:
