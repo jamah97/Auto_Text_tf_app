@@ -8,7 +8,7 @@ from tensorflow.keras import utils
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
 
-st.write("About Section:")
+
 
 
 def main():
