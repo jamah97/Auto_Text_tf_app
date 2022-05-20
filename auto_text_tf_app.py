@@ -33,7 +33,7 @@ def main():
 
 		if choice == "nnlm-en-dim20":
 			iv = st.selectbox("Select predictor variable", df.columns.to_list())
-			dv = st.selectbox("Select independent variable", df.columns.to_list())
+			dv = st.selectbox("Select dependent variable", df.columns.to_list())
 			iv1 = df[iv]
 			dv1 = df[dv].values
 			dv2 = pd.DataFrame(data=dv1)
@@ -73,7 +73,7 @@ def main():
 # step 2 allow end-user to select pre-train text algorithm
 		if choice == "nnlm-en-dim50":
 			iv = st.selectbox("Select predictor variable", df.columns.to_list())
-			dv = st.selectbox("Select independent variable", df.columns.to_list())
+			dv = st.selectbox("Select dependent variable", df.columns.to_list())
 			iv1 = df[iv]
 			dv1 = df[dv].values
 			dv2 = pd.DataFrame(data=dv1)
@@ -110,7 +110,7 @@ def main():
 
 		if choice == "nnlm-en-dim128":
 			iv = st.selectbox("Select predictor variable", df.columns.to_list())
-			dv = st.selectbox("Select independent variable", df.columns.to_list())
+			dv = st.selectbox("Select dependent variable", df.columns.to_list())
 			iv1 = df[iv]
 			dv1 = df[dv].values
 			dv2 = pd.DataFrame(data=dv1)
@@ -150,7 +150,7 @@ def main():
 
 		if choice == "Wiki-words-250-with-normalization/2":
 			iv = st.selectbox("Select predictor variable", df.columns.to_list())
-			dv = st.selectbox("Select independent variable", df.columns.to_list())
+			dv = st.selectbox("Select dependent variable", df.columns.to_list())
 			iv1 = df[iv]
 			dv1 = df[dv].values
 			dv2 = pd.DataFrame(data=dv1)
